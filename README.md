@@ -24,27 +24,27 @@ Checks that the user has selected a deck and sets the *session*'s set id accordi
 ### **add_deck**
 Checks that deck name was provided and if it already exists, then inserts the new deck into the database and flashes success message.
 
-### **help_functions.py**
+## **help_functions.py**
 This file includes a decorator function to check if the user is logged in and to render the Welcome page together with a flashed message otherwise, as well as a Jinja filter *emojify* to convert emojis and a function to display an *apology* page with image and the provided message.
 
-### **cards.db**
+## **cards.db**
 SQL database to keep track of users (id, username and password hash), flashcards (id, user id, set id, shelf, front and back of card) and decks (id, user id, name).
 
-### **navbar.js**
+## **navbar.js**
 JavaScript code to fix the navigation bar at the top of the page when scrolling down.
 
-### **styles.css**
+## **styles.css**
 CSS to determine font style, buttons, forms and their size and position, the navigation bar including links and positioning for use in JS, the cards and position of buttons on them.
 
-### **layout.html**
+## **layout.html**
 General layout to be extended to the HTML templates, including icon, navigation bar (both for logged in and non-logged in users) and Jinja code to show flashed messages and make them dismissable with Bootstrap.
 
 ## **Templates**
-#### Non-logged in users:
+### Non-logged in users:
 *index.html* - simple welcome page with explanation and link to register <br/>
 *login.html* - login form <br/>
 *register.html* - registration form with regex for password strength
-#### Logged in users:
+### Logged in users:
 *dashboard.html* - dashboard showing all of the user's decks in card format, links for adding more decks and to the quiz <br/>
 *pre_quiz.html* - dropdown menu to select the stack of flashcards for the quiz <br/>
 *quiz.html* - display of the top side of a card and an input field on another card for the user to fill in <br/>
