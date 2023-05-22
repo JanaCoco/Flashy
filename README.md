@@ -17,7 +17,7 @@ Checks if the username field has been filled in, then checks if the desired user
 Makes sure that front and back of the new card, as well as the deck have been provided. Then checks for existing duplicates in the database (flashes message and returns if so) and inserts the new card into the given deck, flashing success message.
 Provides a list of the user's decks of cards to the template.
 ## **quiz**
-POST: Checks the user's provided solution against the one in the database using the *Levenshtein* package. If the Levenshtein distance is less than or equal to one, the card is moved up one shelf in the database if not at the maximum (there are eight shelves). If the distance is greater, the flashcard is moved down one shelf. In each case (identical, typo, different), the according message is passed to *quiz_solution*.
+POST: Checks the user's provided solution against the one in the database using the *Levenshtein* package. If the Levenshtein distance is less than or equal to one, the card is moved up one shelf in the database if not at the maximum (there are eight shelves). If the distance is greater, the flashcard is moved down one shelf. In each case (identical, typo, different), the according message is passed to *quiz_solution*. <br/>
 GET: First this function creates a list of eight 'shelves', with all the cards of each shelf in the deck in the respective shelf, along with a list of weights. Then it loops over the two lists and adds only entries of non-empty shelves to two new lists. Lastly, using the *random* package, a shelf is selected randomly with the probabilities of each being determined by the list of weights. Cards on lower shelves are the ones that have not been remembered correctly often and low shelves are therefore more likely to be selected. A card is then picked at random from the chosen shelf and passed to the template.
 ## **pre_quiz**
 Checks that the user has selected a deck and sets the *session*'s set id accordingly.
@@ -41,16 +41,16 @@ General layout to be extended to the HTML templates, including icon, navigation 
 
 ### **Templates**
 ## Non-logged in users:
-*index.html* - simple welcome page with explanation and link to register
-*login.html* - login form
+*index.html* - simple welcome page with explanation and link to register <br/>
+*login.html* - login form <br/>
 *register.html* - registration form with regex for password strength
 ## Logged in users:
-*dashboard.html* - dashboard showing all of the user's decks in card format, links for adding more decks and to the quiz
-*pre_quiz.html* - dropdown menu to select the stack of flashcards for the quiz
-*quiz.html* - display of the top side of a card and an input field on another card for the user to fill in
-*quiz_solution.html* - message to the user informing them about the correctness of their response and display of both sides of the card, button to next card
-*add.html* - for adding new flashcards: dropdown menu of user's decks, input fields for front and back of the new card
-*add_deck.html* - input field for adding a new deck
+*dashboard.html* - dashboard showing all of the user's decks in card format, links for adding more decks and to the quiz <br/>
+*pre_quiz.html* - dropdown menu to select the stack of flashcards for the quiz <br/>
+*quiz.html* - display of the top side of a card and an input field on another card for the user to fill in <br/>
+*quiz_solution.html* - message to the user informing them about the correctness of their response and display of both sides of the card, button to next card <br/>
+*add.html* - for adding new flashcards: dropdown menu of user's decks, input fields for front and back of the new card <br/>
+*add_deck.html* - input field for adding a new deck <br/>
 *apology.html* - meme with relevant error message and code
 
 ### Possible extensions
