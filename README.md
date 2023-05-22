@@ -40,11 +40,11 @@ CSS to determine font style, buttons, forms and their size and position, the nav
 General layout to be extended to the HTML templates, including icon, navigation bar (both for logged in and non-logged in users) and Jinja code to show flashed messages and make them dismissable with Bootstrap.
 
 ### **Templates**
-## Non-logged in users:
+#### Non-logged in users:
 *index.html* - simple welcome page with explanation and link to register <br/>
 *login.html* - login form <br/>
 *register.html* - registration form with regex for password strength
-## Logged in users:
+#### Logged in users:
 *dashboard.html* - dashboard showing all of the user's decks in card format, links for adding more decks and to the quiz <br/>
 *pre_quiz.html* - dropdown menu to select the stack of flashcards for the quiz <br/>
 *quiz.html* - display of the top side of a card and an input field on another card for the user to fill in <br/>
