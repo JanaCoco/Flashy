@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+
+    <h2>That was {{ result | emojify }}</h2><br>
+
+    <br>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Top</div>
+                <div class="card-body">
+                    <h3 class="card-title">{{ card["key"]  }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Back</div>
+                <div class="card-body">
+                    <h3 class="card-title">{{ card["value"] }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <a id="button-left" class="btn btn-outline-info" href="/quiz">Next card</a>
+
+
+{% endblock %}

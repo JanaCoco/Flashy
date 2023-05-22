@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz select
+{% endblock %}
+
+{% block main %}
+
+    <h1>Let's study!</h1>
+    <form autocomplete="off" action="/pre_quiz" method="post">
+        <div class="custom-select">
+            <label for="set">Select stack:</label>
+            <select id="set" name="set" required>
+                <option disabled selected>Stack</option>
+                    {% for row in sets %}
+                        <option value="{{ row["name"] }}">{{ row["name"] }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-outline-info" type="submit">Study</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+
+    <h1>Add new flashcards</h1>
+
+
+    <form action="/add" method="post" autocomplete="off">
+        <div class="custom-select">
+            <label for="set">Select deck:</label>
+            <select id="set" name="set" required>
+                <option disabled selected>Deck</option>
+                    {% for row in sets %}
+                        <option value="{{ row["name"] }}">{{ row["name"] }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="key">Enter top side:</label>
+          <input class="form-control" id="key" name="key" placeholder="Top side" required type="text">
+        </div>
+        <div class="form-group">
+            <label for="value">Enter back side:</label>
+            <input class="form-control" id="value" name="value" placeholder="Back side" required type="text">
+        </div>
+        <button class="btn btn-outline-info" type="submit">Add flashcard</button>
+      </form>
+
+{% endblock %}

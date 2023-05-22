@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add deck
+{% endblock %}
+
+{% block main %}
+
+    <h2>Add a new deck of flashcards</h2>
+    <form action="/add_deck" method="post">
+        <div class="form-group">
+          <label for="deck">Name of new deck:</label>
+          <input autocomplete="off" autofocus class="form-control" id="deck" name="deck" placeholder="English - Spanish" required type="text">
+        </div>
+        <button class="btn btn-outline-info" type="submit">Add deck</button>
+      </form>
+
+{% endblock %}

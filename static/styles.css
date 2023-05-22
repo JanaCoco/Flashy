@@ -1,0 +1,134 @@
+body {
+    font-family: Georgia, Garamond;
+    color: #420434
+}
+
+h1 {
+    font-size: 50px;
+    text-align: left;
+}
+h2 {
+    font-size: 40px;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    text-align: left;
+}
+p a {
+    text-decoration: none;
+}
+
+footer {
+    font-size: 18px;
+    padding: 10px;
+}
+footer a {
+    text-decoration: none;
+    color: #9c0879;
+}
+
+.btn {
+    color: #420434;
+    border: 1px groove #420434;
+}
+.btn:active {
+    background-color: #de5bbf;
+    border: 1px groove #420434;
+}
+.btn:hover {
+    background-color: #de5bbf;
+    border: 1px groove #420434;
+}
+.close {
+    background-color: #9de5f5;
+    border-color: #d9f1fa;
+    border-radius: 3px;
+}
+
+form {
+    text-align: left;
+    line-height: 150%;
+    padding: 40px;
+    width: 50%;
+    font-size: 18px;
+}
+
+input {
+    width: 30%;
+    margin: 8px 0;
+    border-radius: 5px;
+    background-color: #cfa5c5;
+}
+.form-control:focus {
+    border: 3px groove #cfa5c5
+}
+.custom-select {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+a {
+    color: #cfa5c5;
+}
+
+a:hover {
+    text-shadow: 2px 2px 2px #cfa5c5;
+    text-decoration: none;
+    color: #cfa5c5;
+}
+
+#navbar {
+    text-align: left;
+    font-family: Georgia, Garamond;
+    font-size: 30px;
+    background-color: white;
+    border-style: outset;
+    border-color: #cfa5c5;
+
+}
+
+#navbar a {
+    color: #9c0879;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+
+.content {
+    padding: 16px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed + .content {
+    padding-top: 60px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#card-form {
+    width: 100%;
+    align: center;
+}
+#card-form input {
+    width: 100%;
+}
+#card-form button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    -ms-transform: translate(-50%);
+}
+#button-left {
+    position: absolute;
+    left: 5%;
+}

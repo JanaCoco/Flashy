@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <h1>Welcome, {{ username }}!</h1>
+
+    <h3>These are your decks:</h3><br>
+
+    <div class="card-group">
+        {% for deck in decks %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ deck["name"] }}</h5>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><a class="btn btn-outline-info" href="/add_deck">Add new deck ...</a></h5>
+            </div>
+        </div>
+    </div><br>
+
+    <h2>Ready? <a href="/pre_quiz">Let's study!</a></h2>
+
+
+{% endblock %}
